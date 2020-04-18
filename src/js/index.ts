@@ -18,6 +18,9 @@ new Vue({
     computed: { // computed property 
         // https://vuejs.org/v2/guide/computed.html
         output: function () {
+            if (this.words.length == 0) {
+                return "empty";
+            }
             return this.words.toString();
         }
     }
